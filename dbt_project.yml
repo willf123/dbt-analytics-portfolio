@@ -35,10 +35,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 # continue to be built as views. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 
+
+
 models:
   dbt_fundamentals_on_demand:
-      staging:
-      +materialized: view
-
-      marts:
-      +materialized: table
+    +materialized: view # This sets the default for the whole project
+    staging:
+      +materialized: view # (Optional) specific to staging
+    marts:
+      +materialized: table # This overrides the default for just the marts folder
