@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    database: crafty-circlet-491120-t3
+    schema: dbt_wfiore
+    tables:
+      - name: raw_customers
+      - name: raw_orders
