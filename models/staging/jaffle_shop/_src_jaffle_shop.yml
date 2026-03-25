@@ -6,5 +6,16 @@ sources:
     schema: dbt_wfiore
     tables:
       - name: raw_customers
+        columns:
+          - name: id 
+            data_tests:
+              - unique
+              - not_null
+              
       - name: raw_orders
+        columns:
+          - name: id 
+            data_tests:
+              - unique
+              - not_null
       - name: raw_payments
