@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "Orders placed by customers."
+    columns:
+      - name: order_id
+        description: "Primary key for the order."
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Foreign key to dim_customers."
+        data_tests:
+          - not_null
