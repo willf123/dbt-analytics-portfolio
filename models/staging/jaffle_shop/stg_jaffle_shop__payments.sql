@@ -1,0 +1,15 @@
+with source as (
+    select * from {{ source('jaffle_shop', 'raw_payments') }}
+),
+
+renamed as (
+    select
+        id as payment_id,
+        order_id,
+        payment_method,
+        -- convert amount from cents to dollars
+        amount / 100 as amount
+    from source
+)
+
+select * from renamed

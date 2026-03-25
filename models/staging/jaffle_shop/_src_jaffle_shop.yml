@@ -2,8 +2,25 @@ version: 2
 
 sources:
   - name: jaffle_shop
+    description: A clone of a postgres application database
     database: crafty-circlet-491120-t3
     schema: dbt_wfiore
     tables:
       - name: raw_customers
+        description: row customers data
+        columns:
+          - name: id
+            description: primary key for customer data 
+            data_tests:
+              - unique
+              - not_null
+              
       - name: raw_orders
+        description: raw order data
+        columns:
+          - name: id
+            description: primary key for orders data 
+            data_tests:
+              - unique
+              - not_null
+      - name: raw_payments
