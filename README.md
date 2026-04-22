@@ -1,7 +1,8 @@
 # Jaffle Shop & Red Sox Hitter Performance — dbt + BigQuery
+# API weather ingestion
 
 ## Overview
-This repository contains two dbt projects built on Google BigQuery,
+This repository contains three dbt projects built on Google BigQuery,
 demonstrating a full analytics engineering workflow from raw data 
 to mart-layer models.
 
