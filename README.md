@@ -46,3 +46,11 @@ on-base events only. Walks are not captured in the source data.
 - **Warehouse:** Google BigQuery
 - **Transformation:** dbt Cloud
 - **Version Control:** GitHub
+
+
+## Project 3: Tampa Weather API Ingestion
+A Python ingestion pipeline built in Google Colab that pulls 
+7-day weather forecast data for Tampa, FL from the Open-Meteo 
+API and loads it into BigQuery.
+
+**Tools:** Python, Google Colab, BigQuery, Pandas, Open-Meteo API
